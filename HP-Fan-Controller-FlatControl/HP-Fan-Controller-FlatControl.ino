@@ -18,6 +18,7 @@
 
 const uint8_t fan_outpin[6] = {11, 10, 9, 6, 5, 3};
 
+// Set of Fan Speed each fans.
 static float fan_ratio[6] = {0.20, 0.20, 0.20, 0.20, 0.20, 0.20};
 
 void setup() {

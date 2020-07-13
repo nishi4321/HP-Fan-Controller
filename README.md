@@ -1,20 +1,17 @@
 # HP Fan Controller
 
 ## About This
-This is a controller program of HP ProLiant Server with arduino.  
+HP製サーバ向けに作成した、ファンコントロールプログラムです。
+Arduinoを使用し、PWMによってファンを制御します。
+サーバ側の改造が必要です。
 
 ## How to Use
-Coming soon.
+サーバファンのPWMピンに信号を入力すれば良いです。
+HP製サーバはファンの有無をモニタリングしており、障害と判断されるとシャットダウンされます。
+電圧を直接変化させると、ファンが存在しないと判断されてしまうため、PWMによって制御を行う必要がありました。
+
+（具体的な取り付け方法についてはあえて書かないことにします。　改造自体が推奨されませんので。）
 
 ## Programs
 - HP-Fan-Controller-FlatControl
-    - This is a Constant speed control program.
-    - Warning!  
-    This program does not read pwm input.  
-    So, This can cause overheat (over temperature).
-
-- HP-Fan-Controller-VariableControl
-    - Coming soon.
-
-## If you have any problem.
-Please submit about problem to issues.
+    - 常に一定の速度でファンを回転させます。温度等による高回転化などの制御は行いませんので、サーバの過熱に注意が必要です。
